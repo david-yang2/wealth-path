@@ -1,0 +1,4 @@
+*.pyc
+__pycache__/
+db.sqlite3
+wealth_path_backend/.env
