@@ -25,7 +25,7 @@ def login_view(request):
 
         if user:
             login(request, user)
-            return HttpResponseRedirect(reverse("index"))
+            return HttpResponseRedirect('/users/')
         else:
             return render(request, "users/login.html", {
                 "message": "Invalid Credentials"
