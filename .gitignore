@@ -2,3 +2,4 @@
 __pycache__/
 db.sqlite3
 wealth_path_backend/.env
+wealth_path_frontend/.env
