@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from users.views import login_view, logout_view, register_view
 # from rest_framework.routers import DefaultRouter
 # from transactions.api.viewset import TransactionViewSet
 
@@ -25,7 +26,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users/', include('users.urls')),
-    path('transactions/', include('transactions.urls'))
+    # path('users/', include('users.urls')),
+    path('transactions/', include('transactions.urls')),
+    path('login/', login_view, name="login"),
+    path('logout/', logout_view, name="logout"),
+    path('register/', register_view, name="register")
     # path("api/", include(router.urls))
 ]
