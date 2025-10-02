@@ -17,6 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from users.views import login_view, logout_view, register_view
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+
 # from rest_framework.routers import DefaultRouter
 # from transactions.api.viewset import TransactionViewSet
 
@@ -26,10 +31,12 @@ from users.views import login_view, logout_view, register_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('users/', include('users.urls')),
-    path('transactions/', include('transactions.urls')),
+    path('api/transactions/', include('transactions.urls')),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    # path('api/users/', include('users.urls')),
     path('login/', login_view, name="login"),
     path('logout/', logout_view, name="logout"),
     path('register/', register_view, name="register")
-    # path("api/", include(router.urls))
+
 ]
