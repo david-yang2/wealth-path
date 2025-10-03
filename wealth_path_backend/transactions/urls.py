@@ -2,5 +2,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views.UserTransactionsListAPIView.as_view())
+    path("", views.UserTransactionsListAPIView.as_view(), name='transactions-list')
 ]

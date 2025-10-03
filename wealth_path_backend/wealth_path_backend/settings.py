@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "rest_framework",
     "corsheaders",
-    "rest_framework_simplejwt"
+    "rest_framework_simplejwt",
+    "rest_framework_simplejwt.token_blacklist"
 ]
 
 MIDDLEWARE = [
@@ -63,9 +64,13 @@ REST_FRAMEWORK = {
 
     'DEFAULT_AUTHENTICATION_CLASSES': (
 
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'users.authentication.CookiesJWTAuthentication',
     )
 
+}
+
+SIMPLE_JWT = {
+    "BLACKLIST_AFTER_ROTATION" : True
 }
 
 ROOT_URLCONF = 'wealth_path_backend.urls'
