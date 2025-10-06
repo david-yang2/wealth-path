@@ -1,8 +1,15 @@
+import Transactions from "./components/Transactions"
+import Login from "./components/Login"
+
+
 
 const App = () => {
 
   return (
-  <div>Hello</div>
+  <div>
+    <Login />
+    <Transactions />
+  </div>
   )
 }
 
