@@ -1,21 +1,50 @@
 const BASE_URL= import.meta.env.VITE_BASE_API_URL
 
-
-
 async function apiFetchUserTransactions(endpoint, options = {}) {
-  const response = await fetch(`${BASE_URL}${endpoint}`, {
-    headers: {
-      "Content-Type": "application/json",
-    },
-    credentials: "include",
-    ...options,
-  });
-
-  if (!response.ok) {
-    throw new Error(`API error: ${response.status}`);
+  // helper to perform the fetch
+  async function fetchData() {
+    const response = await fetch(`${BASE_URL}${endpoint}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+      ...options,
+    });
+    return response;
   }
+
+  // 1️⃣ first attempt
+  let response = await fetchData();
+
+  // 2️⃣ if unauthorized, try refreshing token
+  if (response.status === 401) {
+    console.warn("Access token expired — attempting refresh...");
+
+    const refreshResponse = await fetch(`${BASE_URL}/token/refresh/`, {
+      method: "POST",
+      credentials: "include", // send refresh cookie
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!refreshResponse.ok) {
+      console.error("Failed to refresh token. Logging out user?");
+      throw new Error("Unable to refresh token — please log in again.");
+    }
+
+    console.log("Token refreshed successfully — retrying request...");
+    // 3️⃣ retry original request
+    response = await fetchData();
+
+    if (!response.ok) {
+      throw new Error(`API error after refresh: ${response.status}`);
+    }
+  }
+
   return response.json();
 }
+
 
 export function getTransactions(){
     return apiFetchUserTransactions('/transactions/')

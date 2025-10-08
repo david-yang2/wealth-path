@@ -19,9 +19,9 @@ const Transactions = () => {
         }
 
 
-    return <div>
+    return <div className={`${border}`}>
         <h1>here are your transactions:</h1>
-        <table className={`${border} table-auto`}>
+        <table className={`${border} table-auto w-full`}>
             <thead>
                 <tr>
                     <th>Type</th>
