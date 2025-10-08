@@ -1,12 +1,13 @@
-const USER_TRANSACTION_LIST_API = import.meta.env.VITE_USER_TRANSACTIONS
+const BASE_URL= import.meta.env.VITE_BASE_API_URL
 
 
 
 async function apiFetchUserTransactions(endpoint, options = {}) {
-  const response = await fetch(`${USER_TRANSACTION_LIST_API}${endpoint}`, {
+  const response = await fetch(`${BASE_URL}${endpoint}`, {
     headers: {
       "Content-Type": "application/json",
     },
+    credentials: "include",
     ...options,
   });
 
@@ -17,5 +18,5 @@ async function apiFetchUserTransactions(endpoint, options = {}) {
 }
 
 export function getTransactions(){
-    return apiFetchUserTransactions('')
+    return apiFetchUserTransactions('/transactions/')
 }

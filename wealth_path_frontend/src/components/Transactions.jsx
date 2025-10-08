@@ -1,6 +1,6 @@
 import {useState} from "react"
 import {getTransactions} from "./transactionsApi"
-
+const border = "border-2 border-red-300"
 
 
 const Transactions = () => {
@@ -8,22 +8,42 @@ const Transactions = () => {
 
       const fetchTransactions = () => {
 
-            getTransactions()
-                .then(data => {
-                setTransactions(data);
-                })
-                .catch(err => console.error(err));
+        getTransactions()
+            .then(data => {
+            setTransactions(data);
+            // console.log(data)
+            })
+            .catch(err => console.error(err));
+            
+        // console.log(`this is transactions: ${transactions}`)
         }
 
 
     return <div>
         <h1>here are your transactions:</h1>
-        <ul>
+        <table className={`${border} table-auto`}>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Currency</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                
             {transactions.map(transaction => 
-            <li key={transaction.id}>
-                {transaction.type}
-            </li>)}
-        </ul>
+            <tr key={transaction.id}>
+                <td>{transaction.type}</td>
+                <td>{transaction.category}</td>
+                <td>{transaction.currency}</td>
+                <td>{transaction.amount}</td>
+                <td>{transaction.description}</td>
+            </tr>
+            )}
+            </tbody>
+        </table>
         <button onClick={fetchTransactions}> click for transactions</button>
     </div>
 
