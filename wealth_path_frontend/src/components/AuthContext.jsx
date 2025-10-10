@@ -15,6 +15,7 @@ const AuthProvider = ({children}) => {
             if (data?.isAuthenticated) {
                 setUser(data.username)
             } else {
+                console.log("not authenticated")
                 setUser(null)
             }
 

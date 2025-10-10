@@ -48,7 +48,7 @@ class CustomTokenObtainPairView(TokenObtainPairView):
                 samesite="None",
                 path="/"
             )
-
+            
             return res
         except:
             return Response({"success":False})

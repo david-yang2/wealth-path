@@ -6,7 +6,6 @@ export const checkauth = async () => {
         {
             credentials: "include",
         })
-
     if (response.ok) {
         const data = await response.json()
         return data
