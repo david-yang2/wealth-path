@@ -6,20 +6,25 @@ const border = "border-2 border-red-300"
 const Transactions = () => {
     const [transactions, setTransactions] = useState([])
 
-      const fetchTransactions = () => {
 
-        getTransactions()
-            .then(data => {
-            setTransactions(data);
-            // console.log(data)
-            })
-            .catch(err => console.error(err));
+    const fetchTransactions = () => {
+
+    getTransactions()
+        .then(data => {
+        setTransactions(data);
+        // console.log(data)
+        })
+        .catch(err => console.error(err));
+        
+    // console.log(`this is transactions: ${transactions}`)
+    }
+
+
+
+
+        return (
             
-        // console.log(`this is transactions: ${transactions}`)
-        }
-
-
-    return <div className={`${border}`}>
+            <div className={`${border}`}>
         <h1>here are your transactions:</h1>
         <table className={`${border} table-auto w-full`}>
             <thead>
@@ -47,8 +52,6 @@ const Transactions = () => {
         <button onClick={fetchTransactions}> click for transactions</button>
     </div>
 
-}
+        )}
 
-
-
-export default Transactions
+export default Transactions;

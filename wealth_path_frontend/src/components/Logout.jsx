@@ -1,8 +1,11 @@
 import {useNavigate} from "react-router"
+import useAuth from "./useAuth"
+
 const BASE_URL = import.meta.env.VITE_BASE_API_URL
 
 const Logout = () => {
     const navigate = useNavigate()
+    const {setUser} = useAuth();
 
     const logout = async (e) => {
         e.preventDefault();
@@ -15,8 +18,7 @@ const Logout = () => {
             }
         })
         const data = await response.json()
-        console.log("Logout Successful:", data);
-        
+        if (data?.success) setUser(null)
         navigate("/")
     }
 
