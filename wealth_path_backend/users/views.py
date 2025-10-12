@@ -13,6 +13,7 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+from rest_framework import status
 
 
 
@@ -51,7 +52,10 @@ class CustomTokenObtainPairView(TokenObtainPairView):
             
             return res
         except:
-            return Response({"success":False})
+            return Response(
+                {"success": False, "error": "Invalid credentials"},
+                    status=status.HTTP_401_UNAUTHORIZED
+                )   
 
 
 
