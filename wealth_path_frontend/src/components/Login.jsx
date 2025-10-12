@@ -46,28 +46,29 @@ const Login = () => {
 
 
         return (
-            <div>
-                <h2>Login</h2>
-                <form onSubmit={handleSubmit}>
-                    <label>
-                        Username
-                    </label>
+            <div className="flex flex-col items-start h-[60%] justify-center bg-slate-100 px-4 rounded-lg">
+                <h2 className="text-2xl font-bold">Please Login:</h2>
+                <form className="flex flex-col"
+                onSubmit={handleSubmit}>
                     <input 
                         type="text"
                         value={username}
+                        placeholder="Enter Username"
                         onChange={(e) => setUsername(e.target.value)}
                         required
+                        className="w-full my-5 border-4 borde-gray-600 px-3"
                     />
-                    <label>
-                        Password
-                    </label>
                     <input
                         type = "password"
                         value={password}
+                        placeholder="Enter Password"
                         onChange={(e) => setPassword(e.target.value)}
                         required
+                        className="w-full my-5 border-4 borde-gray-600 px-3"
                     />
-                    <button type="submit">Login</button>
+                    <button 
+                    className='w-full bg-green-300 rounded-md py-3 text-xl'
+                    type="submit">Login</button>
                 </form>
             </div>
         )
