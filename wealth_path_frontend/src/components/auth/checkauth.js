@@ -10,6 +10,7 @@ export const checkauth = async () => {
         const data = await response.json()
         return data
     } else{
-        console.log("Please log in")
+        console.log("User not authentiated")
+        return { isAuthenticated : false}
     }
 }
