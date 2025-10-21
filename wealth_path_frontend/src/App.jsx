@@ -1,28 +1,47 @@
-import {BrowserRouter,Routes,Route, Link} from "react-router-dom"
-import Transactions from "./components/Transactions"
-import Login from "./components/Login"
-import Logout from "./components/Logout"
-import HomePage from "./components/HomePage"
-import NavBar from "./components/NavBar"
-import ProtectedRoute from "./components/ProtectedRoute"
-import AuthProvider from "./components/AuthContext"
-
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Transactions from "./components/Transactions";
+import Login from "./components/Login";
+import Logout from "./components/Logout";
+import HomePage from "./components/HomePage";
+import NavBar from "./components/NavBar";
+import ProtectedRoute from "./components/auth/ProtectedRoute";
+import AuthProvider from "./components/auth/AuthContext";
 
 const App = () => {
-
   return (
     <AuthProvider>
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/transactions" element={<ProtectedRoute><Transactions /></ProtectedRoute>} />
-        <Route path="/logout" element={<ProtectedRoute><Logout /></ProtectedRoute>} /> 
-      </Routes>
-    </BrowserRouter>
-    </AuthProvider>
-  )
-}
+      <div className="flex flex-col h-full">
+        <BrowserRouter>
+          <div className="w-full flex justify-center">
 
-export default App
+          <NavBar />
+          </div>
+          <div className="flex-1 flex justify-center">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/login" element={<Login />} />
+              <Route
+                path="/transactions"
+                element={
+                  <ProtectedRoute>
+                    <Transactions />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/logout"
+                element={
+                  <ProtectedRoute>
+                    <Logout />
+                  </ProtectedRoute>
+                }
+              />
+            </Routes>
+          </div>
+        </BrowserRouter>
+      </div>
+    </AuthProvider>
+  );
+};
+
+export default App;

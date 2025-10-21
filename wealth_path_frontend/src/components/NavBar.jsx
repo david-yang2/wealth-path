@@ -1,4 +1,4 @@
-import useAuth from "./useAuth";
+import useAuth from "./auth/useAuth";
 import NavModal from "./NavModal";
 import { useState } from "react";
 
@@ -7,13 +7,13 @@ const NavBar = () => {
   const { user } = useAuth();
 
   return (
-    <div className="flex flex-row justify-between bg-slate-100  px-2 py-5 h-24">
-      <div className="relative border-2 border-red-300">
+    <div className="max-w-[95%] w-full border-2 border-red-200 flex flex-row justify-between items-center px-2 py-5 h-[56px] my-3">
+      <div className="text-2xl font-bold flex items-center">
+        Wealth Path
+      </div>
+      <div className="relativ">
         <i onClick={() => setOpenMenu(true)} className="fa-solid fa-bars text-3xl"></i>
         {openMenu ? <NavModal user={user} setOpenMenu={setOpenMenu} /> : null}
-      </div>
-      <div className="text-2xl font-bold flex items-center pl-5 border-2 border-red-200 w-1/3">
-        Wealth Path
       </div>
     </div>
   );
