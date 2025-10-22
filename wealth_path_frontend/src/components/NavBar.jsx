@@ -7,12 +7,12 @@ const NavBar = () => {
   const { user } = useAuth();
 
   return (
-    <div className="max-w-[95%] w-full border-2 border-red-200 flex flex-row justify-between items-center px-2 py-5 h-[56px] my-3">
-      <div className="text-2xl font-bold flex items-center">
+    <div className='bg-green-400 hidden w-full md:flex flex-row justify-between items-center px-[2.5%] py-5 mb-3'>
+      <div className="text-4xl font-bold flex items-center">
         Wealth Path
       </div>
-      <div className="relativ">
-        <i onClick={() => setOpenMenu(true)} className="fa-solid fa-bars text-3xl"></i>
+      <div className="relative">
+        <i onClick={() => setOpenMenu(true)} className="fa-solid fa-bars text-4xl"></i>
         {openMenu ? <NavModal user={user} setOpenMenu={setOpenMenu} /> : null}
       </div>
     </div>

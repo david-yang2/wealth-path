@@ -8,15 +8,15 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import AuthProvider from "./components/auth/AuthContext";
 
 const App = () => {
+
   return (
     <AuthProvider>
-      <div className="flex flex-col h-full">
+      <div className="flex flex-col h-full w-full">
         <BrowserRouter>
           <div className="w-full flex justify-center">
-
           <NavBar />
           </div>
-          <div className="flex-1 flex justify-center">
+          <div className="flex flex-1 justify-center">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/login" element={<Login />} />
