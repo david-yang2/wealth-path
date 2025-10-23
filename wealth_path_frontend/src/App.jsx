@@ -20,7 +20,7 @@ const App = () => {
     const width = useWindowWidth();
     const location = useLocation();
 
-    const showNavBar = width >= 768 && location !== "/";
+    const showNavBar = width >= 768 || location.pathname !== "/";
 
     return (
       <div className="flex flex-col h-full w-full">
