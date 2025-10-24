@@ -23,7 +23,7 @@ const NavBar = () => {
           onClick={() => setOpenMenu(true)}
           className="fa-solid fa-bars text-4xl"
         ></i>
-        {openMenu ? <NavModal user={user} setOpenMenu={setOpenMenu} /> : null}
+        {openMenu ? <NavModal user={user} onClose={() => setOpenMenu(false)} /> : null}
       </div>
     </div>
   );
