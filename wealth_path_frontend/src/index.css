@@ -11,3 +11,8 @@ html, body, #root {
 body {
     @apply bg-green-200
 }
+
+
+#login-container > form > input {
+    @apply border-2 shadow-md my-2 md:my-5 py-3 px-5 rounded-lg
+}

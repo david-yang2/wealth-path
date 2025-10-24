@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import useAuth from "./useAuth";
-import { checkauth } from "./checkauth";
+import useAuth from "./auth/useAuth";
+import { checkauth } from "./auth/checkauth";
 const BASE_URL = import.meta.env.VITE_BASE_API_URL;
 
 const Login = () => {
@@ -41,9 +41,9 @@ const Login = () => {
   };
 
   return (
-    <div className="w-full h-full flex justify-center items-center">
-      <div className="flex flex-col items-start h-[60%] justify-center bg-slate-100 px-4 rounded-lg">
-        <h2 className="text-2xl font-bold">Please Login:</h2>
+    <div id="login-component" className="w-full h-full flex items-start md:items-center md:w-auto">
+      <div id="login-container" className="flex flex-col items-center md:items-start justify-center w-full h-auto py-10 bg-slate-100 md:px-10 md:py-[20%] rounded-lg">
+        <h2 className="text-3xl font-bold mb-2">Please Login:</h2>
         <form className="flex flex-col" onSubmit={handleSubmit}>
           <input
             type="text"
@@ -51,7 +51,7 @@ const Login = () => {
             placeholder="Enter Username"
             onChange={(e) => setUsername(e.target.value)}
             required
-            className="w-full my-5 border-4 borde-gray-600 px-3"
+
           />
           <input
             type="password"
@@ -59,11 +59,11 @@ const Login = () => {
             placeholder="Enter Password"
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="w-full my-5 border-4 borde-gray-600 px-3"
+
           />
           { error ? (<div className="text-red-600 mt-2 mb-4">{error}</div>) : (<div></div> )}
           <button
-            className="w-full bg-green-300 rounded-md py-3 text-xl"
+            className="w-full bg-green-300 rounded-md mt-3 py-3 text-xl"
             type="submit"
           >
             Login
