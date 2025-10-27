@@ -16,3 +16,7 @@ body {
 #login-container > form > input {
     @apply border-2 shadow-md my-2 md:my-5 py-3 px-5 rounded-lg
 }
+
+#navmodal-container > nav > a {
+    @apply mb-4 flex flex-row items-center
+}

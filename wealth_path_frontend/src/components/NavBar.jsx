@@ -9,7 +9,7 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-green-400 w-full flex flex-row justify-between items-center px-[2.5%] py-5 mb-3">
+    <div className="bg-green-400 w-full flex flex-row justify-between items-center px-[2.5%] py-5">
       <div
         className="text-4xl font-bold flex items-center"
         onClick={() => navigate("/")}
