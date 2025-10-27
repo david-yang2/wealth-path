@@ -19,21 +19,25 @@ const NavModal = (props) => {
           <i className="fa-solid fa-xmark text-2xl mb-3"></i>
         </button>
         <nav className="flex flex-col justify-around items-start w-1/3 text-2xl">
-          <Link to="/">
+          <Link to="/"
+          onClick={onClose}>
             <i className="fa-regular fa-house mr-2"></i>
             Home
           </Link>
-          <Link to="/transactions">
+          <Link to="/transactions"
+          onClick={onClose}>
           <i className="fa-solid fa-money-check mr-2"></i>
             Transactions
           </Link>
           {user ? (
-            <Link to="/logout">
+            <Link to="/logout"
+            onClick={onClose}>
             <i className="fa-solid fa-right-from-bracket mr-2"></i>
               Logout
             </Link>
           ) : (
-            <Link to="/login">
+            <Link to="/login"
+            onClick={onClose}>
                 <i className="fa-solid fa-arrow-right-to-bracket mr-2"></i>
               Login
             </Link>
