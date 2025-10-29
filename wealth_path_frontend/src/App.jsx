@@ -13,7 +13,7 @@ import NavBar from "./components/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import AuthProvider from "./components/auth/AuthContext";
 import useWindowWidth from "./components/useWindowWidth";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/dashboard/Dashboard";
 
 const App = () => {
   // Layout of paths and to call useLocation()
