@@ -13,6 +13,7 @@ import NavBar from "./components/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import AuthProvider from "./components/auth/AuthContext";
 import useWindowWidth from "./components/useWindowWidth";
+import Dashboard from "./components/Dashboard";
 
 const App = () => {
   // Layout of paths and to call useLocation()
@@ -31,6 +32,14 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login />} />
+            <Route
+              path="/dashboard"
+              element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              }
+            />  
             <Route
               path="/transactions"
               element={
