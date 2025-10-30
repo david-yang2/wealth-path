@@ -1,0 +1,926 @@
+[
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-01-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "RENT",
+      "amount": "1800.00",
+      "currency": "USD",
+      "description": "Monthly rent",
+      "transaction_date": "2025-01-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "UTILITIES",
+      "amount": "210",
+      "currency": "USD",
+      "description": "Electricity, water, internet",
+      "transaction_date": "2025-01-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "HEALTH",
+      "amount": "95.20",
+      "currency": "USD",
+      "description": "Health-related costs",
+      "transaction_date": "2025-01-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "250.30",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-01-17",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-01-18",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-02-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "RENT",
+      "amount": "1800.00",
+      "currency": "USD",
+      "description": "Monthly rent",
+      "transaction_date": "2025-02-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "UTILITIES",
+      "amount": "133",
+      "currency": "USD",
+      "description": "Electricity, water, internet",
+      "transaction_date": "2025-02-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "HEALTH",
+      "amount": "95.20",
+      "currency": "USD",
+      "description": "Health-related costs",
+      "transaction_date": "2025-02-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "300",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-02-17",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-02-18",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-03-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "RENT",
+      "amount": "1800.00",
+      "currency": "USD",
+      "description": "Monthly rent",
+      "transaction_date": "2025-03-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "UTILITIES",
+      "amount": "142",
+      "currency": "USD",
+      "description": "Electricity, water, internet",
+      "transaction_date": "2025-03-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "HEALTH",
+      "amount": "95.20",
+      "currency": "USD",
+      "description": "Health-related costs",
+      "transaction_date": "2025-03-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "67",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-03-12",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "12",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-03-15",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-03-18",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "58",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-04-02",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-04-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "RENT",
+      "amount": "1800.00",
+      "currency": "USD",
+      "description": "Monthly rent",
+      "transaction_date": "2025-04-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "UTILITIES",
+      "amount": "111",
+      "currency": "USD",
+      "description": "Electricity, water, internet",
+      "transaction_date": "2025-04-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "HEALTH",
+      "amount": "95.20",
+      "currency": "USD",
+      "description": "Health-related costs",
+      "transaction_date": "2025-04-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "73.19",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-04-15",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-04-18",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-05-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "RENT",
+      "amount": "1800.00",
+      "currency": "USD",
+      "description": "Monthly rent",
+      "transaction_date": "2025-05-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "UTILITIES",
+      "amount": "187",
+      "currency": "USD",
+      "description": "Electricity, water, internet",
+      "transaction_date": "2025-05-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "HEALTH",
+      "amount": "95.20",
+      "currency": "USD",
+      "description": "Health-related costs",
+      "transaction_date": "2025-05-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-05-18",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "90",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-05-22",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "38.5",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-05-30",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "150.30",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-06-01",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "RENT",
+      "amount": "1800.00",
+      "currency": "USD",
+      "description": "Monthly rent",
+      "transaction_date": "2025-06-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "UTILITIES",
+      "amount": "190",
+      "currency": "USD",
+      "description": "Electricity, water, internet",
+      "transaction_date": "2025-06-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "HEALTH",
+      "amount": "95.20",
+      "currency": "USD",
+      "description": "Health-related costs",
+      "transaction_date": "2025-06-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-06-18",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "98.30",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-06-19",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-07-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "RENT",
+      "amount": "1800.00",
+      "currency": "USD",
+      "description": "Monthly rent",
+      "transaction_date": "2025-07-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "UTILITIES",
+      "amount": "188.75",
+      "currency": "USD",
+      "description": "Electricity, water, internet",
+      "transaction_date": "2025-07-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "HEALTH",
+      "amount": "95.20",
+      "currency": "USD",
+      "description": "Health-related costs",
+      "transaction_date": "2025-07-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "65",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-07-12",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-07-18",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "174",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-07-25",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "98",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-08-02",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-08-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "RENT",
+      "amount": "1800.00",
+      "currency": "USD",
+      "description": "Monthly rent",
+      "transaction_date": "2025-08-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "UTILITIES",
+      "amount": "180.75",
+      "currency": "USD",
+      "description": "Electricity, water, internet",
+      "transaction_date": "2025-08-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "HEALTH",
+      "amount": "95.20",
+      "currency": "USD",
+      "description": "Health-related costs",
+      "transaction_date": "2025-08-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "55",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-08-16",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-08-18",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-09-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "RENT",
+      "amount": "1800.00",
+      "currency": "USD",
+      "description": "Monthly rent",
+      "transaction_date": "2025-09-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "UTILITIES",
+      "amount": "260.75",
+      "currency": "USD",
+      "description": "Electricity, water, internet",
+      "transaction_date": "2025-09-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "HEALTH",
+      "amount": "95.20",
+      "currency": "USD",
+      "description": "Health-related costs",
+      "transaction_date": "2025-09-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "305",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-09-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-09-18",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-10-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "RENT",
+      "amount": "1800.00",
+      "currency": "USD",
+      "description": "Monthly rent",
+      "transaction_date": "2025-10-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "UTILITIES",
+      "amount": "155.75",
+      "currency": "USD",
+      "description": "Electricity, water, internet",
+      "transaction_date": "2025-10-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "HEALTH",
+      "amount": "95.20",
+      "currency": "USD",
+      "description": "Health-related costs",
+      "transaction_date": "2025-10-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "60",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-10-06",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "83",
+      "currency": "USD",
+      "description": "Groceries and dining",
+      "transaction_date": "2025-10-17",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-10-18",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  }
+]
