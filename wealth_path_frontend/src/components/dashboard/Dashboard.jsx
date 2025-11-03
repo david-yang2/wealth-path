@@ -5,8 +5,8 @@ import Summary from "./Summary";
 
 const Dashboard = () => {
   return (
-    <div>
-      <div className="text-3xl font-bold my-3">Dashboard</div>
+    <div id="dashboard-container" className="w-full max-w-6xl">
+      <div className="text-3xl font-bold my-3 pl-[2.5%]">Dashboard</div>
       <div className="min-h-screen w-full bg-gray-50 p-6 grid gap-6 md:grid-cols-2 rounded-lg">
         <div className="md:col-span-2">
           <Summary />

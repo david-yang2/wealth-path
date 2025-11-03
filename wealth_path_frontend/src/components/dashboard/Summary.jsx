@@ -1,20 +1,31 @@
 import DashboardCard from "./DashboardCard";
+import { useState, useEffect } from "react";
+import { getTotals } from "../transactionsApi";
 
 const Summary = () => {
-  // data
-  const income = 4000;
-  const expense = 3000;
-  const savings = income - expense;
-  const expenseRatio = (expense / income) * 100;
-  const percentage = (savings / income) * 100;
+  const [totalIncome, setTotalIncome] = useState(0);
+  const [totalExpense, setTotalExpense] = useState(0);
+
+  useEffect(() => {
+    getTotals()
+      .then((data) => {
+        setTotalIncome(data.total_income);
+        setTotalExpense(data.total_expense);
+      })
+      .catch((err) => console.log.error(err));
+  }, []);
+
+  const savings = totalIncome - totalExpense;
+  const expenseRatio = (totalExpense / totalIncome) * 100;
+  const percentage = (savings / totalIncome) * 100;
 
   return (
     <DashboardCard>
       <div className="flex flex-row h-full justify-between items-center px-5 ">
         <div className="flex flex-col flex-1 h-full justify-between ">
           <div className="text-2xl font-bold mb-3"> Summary</div>
-          <div className="mb-3"> Total income: ${income}</div>
-          <div className="mb-3"> Total expense: ${expense}</div>
+          <div className="mb-3"> Total income: ${Number(totalIncome).toLocaleString()}</div>
+          <div className="mb-3"> Total expense: ${Number(totalExpense).toLocaleString()}</div>
         </div>
         {/* circular progress */}
         <div className="w-[50%]  flex flex-col justify-end items-center">
@@ -28,7 +39,7 @@ const Summary = () => {
           >
             {/* Inner circle to make it look like a ring */}
             <div className="w-[70%] h-[70%] bg-white rounded-full flex flex-col items-center justify-center">
-              <span className="text-xl font-bold text-gray-800">Savings:</span>
+              <span className="text-xl font-bold text-gray-800">Total Savings:</span>
               <span className="text-sm text-gray-500">${savings}</span>
             </div>
           </div>
