@@ -29,7 +29,7 @@ class UserTransactionsListAPIView(generics.ListAPIView):
     ordering_fields = ["transaction_date"]
 
     # permission check
-    # Restrict access to authenticated users (returns 401 if not authenticated)
+    # Restrict access to authenticated users only (returns 401 if not authenticated)
     permission_classes = [IsAuthenticated]
 
     # Customize queryset to return only the logged-in user's transactions
@@ -42,16 +42,24 @@ class UserTransactionsListAPIView(generics.ListAPIView):
 
 
 class TransactionTotalsAPIView(APIView):
+    # restrict access to authenticated users only
     permission_classes = [IsAuthenticated]
 
+    # get request
     def get(self, request):
+
+        # get the request's user
         user = request.user
 
         # Optional filters
         start_date = request.query_params.get("start_date")
         end_date = request.query_params.get("end_date")
 
+
+        # filter queryset by user. only retrieve transaction objects that belongs to the user
         qs = Transaction.objects.filter(user=user)
+
+        # if user submitted start_date and end_dates
         if start_date:
             try:
                 sd = datetime.strptime(start_date, "%Y-%m-%d").date()

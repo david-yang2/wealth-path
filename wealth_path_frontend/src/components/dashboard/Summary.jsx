@@ -12,7 +12,7 @@ const Summary = () => {
         setTotalIncome(data.total_income);
         setTotalExpense(data.total_expense);
       })
-      .catch((err) => console.log.error(err));
+      .catch((err) => console.error(err));
   }, []);
 
   const savings = totalIncome - totalExpense;

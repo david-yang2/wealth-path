@@ -49,3 +49,16 @@ async function apiFetchUserTransactions(endpoint, options = {}) {
 export function getTransactions(){
     return apiFetchUserTransactions('/transactions/')
 }
+
+export function getTotals(start_date, end_date){
+  let url = "/transactions/totals"
+
+  const params = []
+  if (start_date) params.push(`start_date=${start_date}`)
+  if (end_date) params.push(`end_date=${end_date}`)
+  
+  if (params.length > 0) {
+    url += `?${params.join('&')}`
+  }
+  return apiFetchUserTransactions(url)
+}
