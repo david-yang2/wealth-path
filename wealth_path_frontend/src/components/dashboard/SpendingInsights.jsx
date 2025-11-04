@@ -1,4 +1,5 @@
 import DashboardCard from "./DashboardCard";
+import { generateDateRange } from "./generateDateRange";
 
 const SpendingInsights = () => {
   // example data
@@ -12,14 +13,35 @@ const SpendingInsights = () => {
   const totalExpense =
     food + rent + transportation + entertainment + utilities + health + other;
 
+  
+  // date selection
+
+  const handleChange = (e) => {
+ 
+    const start_date = JSON.parse(e.target.value).start_date;
+    const end_date = JSON.parse(e.target.value).end_date
+  };
+
+
+  const dateRangeSelection = () => {
+    const dateRanges = generateDateRange();
+
+    return dateRanges.map((range, i) => (
+      <option key={i} value={JSON.stringify(range)}>
+        {range.label} ({range.start_date} - {range.end_date})
+      </option>
+    ));
+  };
+
+  // pie chart info
   const segments = [
-    { color: "#153bfc", value: food, name: "food"},
-    { color: "#65af51", value: rent, name:"rent"},
-    { color: "#ffb200", value: transportation, name:"transportaiton"},
-    { color: "#ffc3a0", value: entertainment, name:"entertainment" },
-    { color: "#bfff0c", value: utilities, name:"utilities" },
-    { color: "#bd0006", value: health, name:"health" },
-    { color: "#a855ff", value: other, name:"other" },
+    { color: "#153bfc", value: food, name: "food" },
+    { color: "#65af51", value: rent, name: "rent" },
+    { color: "#ffb200", value: transportation, name: "transportaiton" },
+    { color: "#ffc3a0", value: entertainment, name: "entertainment" },
+    { color: "#bfff0c", value: utilities, name: "utilities" },
+    { color: "#bd0006", value: health, name: "health" },
+    { color: "#a855ff", value: other, name: "other" },
   ];
 
   let startAngle = 0;
@@ -44,8 +66,15 @@ const SpendingInsights = () => {
 
   return (
     <DashboardCard>
-      <div>
-        <div className="text-2xl font-bold mb-3">SpendingInsights</div>
+      <div className="flex flex-col justify-between h-full">
+        {/* Title + Dropdown */}
+        <div className="flex w-full items-center justify-between mb-3">
+          <div className="text-2xl font-bold">SpendingInsights</div>
+          <select className="px-5 py-1 rounded-lg" onChange={handleChange}>
+            <option value="">-- Select a range --</option>
+            {dateRangeSelection()}
+          </select>
+        </div>
         {/* content */}
         <div className="w-full flex justify-between">
           {/* piechart */}
