@@ -19,10 +19,24 @@
       "user": 2,
       "type": "EXPENSE",
       "category": "RENT",
-      "amount": "1800.00",
+      "amount": "3000.00",
       "currency": "USD",
       "description": "Monthly rent",
       "transaction_date": "2025-01-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+    {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "162.5",
+      "currency": "USD",
+      "description": "Gas",
+      "transaction_date": "2025-01-05",
       "created_at": "2025-02-03T12:00:00Z",
       "updated_at": "2025-02-03T12:00:00Z"
     }
@@ -103,10 +117,24 @@
       "user": 2,
       "type": "EXPENSE",
       "category": "RENT",
-      "amount": "1800.00",
+      "amount": "3000.00",
       "currency": "USD",
       "description": "Monthly rent",
       "transaction_date": "2025-02-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "175",
+      "currency": "USD",
+      "description": "Gas",
+      "transaction_date": "2025-02-05",
       "created_at": "2025-02-03T12:00:00Z",
       "updated_at": "2025-02-03T12:00:00Z"
     }
@@ -187,10 +215,24 @@
       "user": 2,
       "type": "EXPENSE",
       "category": "RENT",
-      "amount": "1800.00",
+      "amount": "3000.00",
       "currency": "USD",
       "description": "Monthly rent",
       "transaction_date": "2025-03-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "200.5",
+      "currency": "USD",
+      "description": "Gas",
+      "transaction_date": "2025-03-15",
       "created_at": "2025-02-03T12:00:00Z",
       "updated_at": "2025-02-03T12:00:00Z"
     }
@@ -293,13 +335,27 @@
       "updated_at": "2025-02-03T12:00:00Z"
     }
   },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "188",
+      "currency": "USD",
+      "description": "Gas",
+      "transaction_date": "2025-04-06",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
   {
     "model": "transactions.transaction",
     "fields": {
       "user": 2,
       "type": "EXPENSE",
       "category": "RENT",
-      "amount": "1800.00",
+      "amount": "3000.00",
       "currency": "USD",
       "description": "Monthly rent",
       "transaction_date": "2025-04-03",
@@ -383,10 +439,24 @@
       "user": 2,
       "type": "EXPENSE",
       "category": "RENT",
-      "amount": "1800.00",
+      "amount": "3000.00",
       "currency": "USD",
       "description": "Monthly rent",
       "transaction_date": "2025-05-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "190",
+      "currency": "USD",
+      "description": "Gas",
+      "transaction_date": "2025-05-10",
       "created_at": "2025-02-03T12:00:00Z",
       "updated_at": "2025-02-03T12:00:00Z"
     }
@@ -481,10 +551,24 @@
       "user": 2,
       "type": "EXPENSE",
       "category": "RENT",
-      "amount": "1800.00",
+      "amount": "3000.00",
       "currency": "USD",
       "description": "Monthly rent",
       "transaction_date": "2025-06-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "200",
+      "currency": "USD",
+      "description": "Gas",
+      "transaction_date": "2025-06-04",
       "created_at": "2025-02-03T12:00:00Z",
       "updated_at": "2025-02-03T12:00:00Z"
     }
@@ -565,10 +649,24 @@
       "user": 2,
       "type": "EXPENSE",
       "category": "RENT",
-      "amount": "1800.00",
+      "amount": "3000.00",
       "currency": "USD",
       "description": "Monthly rent",
       "transaction_date": "2025-07-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "199",
+      "currency": "USD",
+      "description": "Gas",
+      "transaction_date": "2025-07-02",
       "created_at": "2025-02-03T12:00:00Z",
       "updated_at": "2025-02-03T12:00:00Z"
     }
@@ -671,13 +769,27 @@
       "updated_at": "2025-02-03T12:00:00Z"
     }
   },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "310",
+      "currency": "USD",
+      "description": "Gas",
+      "transaction_date": "2025-08-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
   {
     "model": "transactions.transaction",
     "fields": {
       "user": 2,
       "type": "EXPENSE",
       "category": "RENT",
-      "amount": "1800.00",
+      "amount": "3000.00",
       "currency": "USD",
       "description": "Monthly rent",
       "transaction_date": "2025-08-03",
@@ -761,10 +873,24 @@
       "user": 2,
       "type": "EXPENSE",
       "category": "RENT",
-      "amount": "1800.00",
+      "amount": "3000.00",
       "currency": "USD",
       "description": "Monthly rent",
       "transaction_date": "2025-09-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "230",
+      "currency": "USD",
+      "description": "Gas",
+      "transaction_date": "2025-09-12",
       "created_at": "2025-02-03T12:00:00Z",
       "updated_at": "2025-02-03T12:00:00Z"
     }
@@ -845,10 +971,24 @@
       "user": 2,
       "type": "EXPENSE",
       "category": "RENT",
-      "amount": "1800.00",
+      "amount": "3000.00",
       "currency": "USD",
       "description": "Monthly rent",
       "transaction_date": "2025-10-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "162.5",
+      "currency": "USD",
+      "description": "Gas",
+      "transaction_date": "2025-10-02",
       "created_at": "2025-02-03T12:00:00Z",
       "updated_at": "2025-02-03T12:00:00Z"
     }

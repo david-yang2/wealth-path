@@ -51,14 +51,19 @@ export function getTransactions(){
 }
 
 export function getTotals(start_date, end_date){
+  // base URL
   let url = "/transactions/totals"
 
+  // array for params
   const params = []
   if (start_date) params.push(`start_date=${start_date}`)
   if (end_date) params.push(`end_date=${end_date}`)
   
+  // if there are any params concatenate them
   if (params.length > 0) {
     url += `?${params.join('&')}`
   }
+
+  // use the final URL and fetch
   return apiFetchUserTransactions(url)
 }

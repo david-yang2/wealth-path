@@ -74,12 +74,30 @@ class TransactionTotalsAPIView(APIView):
                 return Response({"detail": "end_date must be YYYY-MM-DD"}, status=400)
 
         agg = qs.aggregate(
+            # Sum the 'amount' of all transactions where 'type' is INCOME
             total_income=Sum("amount", filter=Q(type=Transaction.TransactionType.INCOME)),
+            # Sum the 'amount' of all transactions where 'type' is EXPENSE
             total_expense=Sum("amount", filter=Q(type=Transaction.TransactionType.EXPENSE)),
+            # Sum the 'amount' of transactions in each specific category
+            total_food=Sum("amount", filter=Q(category=Transaction.Category.FOOD)),
+            total_rent=Sum("amount", filter=Q(category=Transaction.Category.RENT)),
+            total_transportation=Sum("amount", filter=Q(category=Transaction.Category.TRANSPORTATION)),
+            total_entertainment=Sum("amount", filter=Q(category=Transaction.Category.ENTERTAINMENT)),
+            total_utilities=Sum("amount", filter=Q(category=Transaction.Category.UTILITIES)),
+            total_health=Sum("amount", filter=Q(category=Transaction.Category.HEALTH)),
+            total_other=Sum("amount", filter=Q(category=Transaction.Category.OTHER))
+            
         )
 
         total_income = agg.get("total_income") or Decimal("0.00")
         total_expense = agg.get("total_expense") or Decimal("0.00")
+        total_food = agg.get("total_food") or Decimal("0.00")
+        total_rent = agg.get("total_rent") or Decimal("0.00")
+        total_transportation = agg.get("total_transportation") or Decimal("0.00")
+        total_entertainment = agg.get("total_entertainment") or Decimal("0.00")
+        total_utilities = agg.get("total_utilities") or Decimal("0.00")
+        total_health = agg.get("total_health") or Decimal("0.00")
+        total_other= agg.get("total_other") or Decimal("0.00")
 
         # Serialize both totals and transaction list
         transactions = TransactionSerializer(qs, many=True)
@@ -87,7 +105,14 @@ class TransactionTotalsAPIView(APIView):
         data = {
             "total_income": total_income,
             "total_expense": total_expense,
-            "transactions": transactions.data,
+            "total_food": total_food,
+            "total_rent": total_rent,
+            "total_transportation" : total_transportation,
+            "total_entertainment" : total_entertainment,
+            "total_utilities" : total_utilities,
+            "total_health" : total_health,
+            "total_other" : total_other,
+            "transactions": transactions.data
         }
 
         return Response(data)
