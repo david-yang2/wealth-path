@@ -1,7 +1,9 @@
 import homepageImage from "../assets/homepage.png";
 import { useNavigate } from "react-router-dom";
+import useAuth from "./auth/useAuth";
 
 const HomePage = () => {
+  const {user} = useAuth();
   const navigate = useNavigate();
   return (
     <div className="flex flex-1 flex-col md:flex-row justify-betwen items-center h-full max-w-[85%] md:max-w-[95%]">
@@ -29,7 +31,7 @@ const HomePage = () => {
         <div className="w-full flex justify-center">
           <button
             className="bg-blue-500 hover:bg-blue-700 md:text-3xl py-[5%] px-[20%] text-white rounded-md"
-            onClick={() => navigate("/login")}
+            onClick={() => user? navigate("/dashboard") : navigate("/login")}
           >
             Get Started
           </button>
