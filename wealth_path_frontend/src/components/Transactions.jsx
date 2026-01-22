@@ -2,9 +2,12 @@ import { useState } from "react";
 import { getTransactions } from "./transactionsApi";
 import { useEffect } from "react";
 import useWindowWidth from "./useWindowWidth";
+import TransactionModal from "./TransactionModal";
 
 const Transactions = () => {
   const [transactions, setTransactions] = useState([]);
+  const [openEditModal, setOpenEditModal] = useState(false);
+  const [editTransaction, setEditTransaction] = useState({})
 
   useEffect(() => {
     getTransactions()
@@ -20,10 +23,11 @@ const Transactions = () => {
   const width = useWindowWidth();
   const showTable = width >= 768;
 
-  const updateEntry = (e) => {
-    e.stopPropagation()
-    console.log("clicked")
-  }
+  const updateEntry = (e, updateObj) => {
+    e.stopPropagation();
+    setEditTransaction(prev => ({...prev, ...updateObj}))
+    setOpenEditModal(true);
+  };
 
   return (
     <div className="p-8 w-full max-w-5xl mx-auto">
@@ -38,6 +42,7 @@ const Transactions = () => {
 
       {showTable ? (
         <div className="w-full overflow-x-auto border border-gray-200 rounded-lg shadow-sm bg-white">
+          {openEditModal ? <TransactionModal updateObj={editTransaction} setOpenEditModal={setOpenEditModal}/> : null}
           {/* table container */}
           <table className="table-auto w-full text-left border-collapse">
             <thead className="bg-gray-100 text-gray-700 uppercase text-sm">
@@ -55,7 +60,7 @@ const Transactions = () => {
                   <tr
                     key={transaction.id}
                     className="hover:bg-gray-50 transition-colors"
-                    onClick={updateEntry}
+                    onClick={(e) => updateEntry(e, transaction)}
                   >
                     <td className="px-4 py-3 border-b">
                       {transaction.transaction_date}
@@ -86,7 +91,6 @@ const Transactions = () => {
           </table>
         </div>
       ) : (
-
         // show div for screens smaller than medium
         <div className="grid">
           {transactions.length > 0 ? (
