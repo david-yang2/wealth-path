@@ -116,3 +116,15 @@ class TransactionTotalsAPIView(APIView):
         }
 
         return Response(data)
+    
+
+
+# view to update 1 or more properties of the transaction
+class UpdateTransactionAPIView(generics.RetrieveUpdateAPIView):
+    serializer_class = TransactionSerializer
+    permission_classes = [IsAuthenticated]
+    
+
+    def get_queryset(self):
+        # Only expose transactions that belong to the authenticated user
+        return Transaction.objects.filter(user=self.request.user)
