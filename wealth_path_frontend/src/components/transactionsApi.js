@@ -1,9 +1,10 @@
 const BASE_URL= import.meta.env.VITE_BASE_API_URL
 
-async function apiFetchUserTransactions(endpoint, options = {}) {
+async function apiFetchUserTransactions(endpoint, options = {}, method = "GET") {
   // helper to perform the fetch
   async function fetchData() {
     const response = await fetch(`${BASE_URL}${endpoint}`, {
+      method: method,
       headers: {
         "Content-Type": "application/json",
       },
@@ -66,4 +67,14 @@ export function getTotals(start_date, end_date){
 
   // use the final URL and fetch
   return apiFetchUserTransactions(url)
+}
+
+
+export function updateTransactionEntry(uuid, data){
+  return apiFetchUserTransactions(
+  `/transactions/${uuid}/`, 
+  {
+  body: JSON.stringify(data)
+  }, 
+  "PATCH")
 }

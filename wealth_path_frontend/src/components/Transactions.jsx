@@ -7,42 +7,50 @@ import TransactionModal from "./TransactionModal";
 const Transactions = () => {
   const [transactions, setTransactions] = useState([]);
   const [openEditModal, setOpenEditModal] = useState(false);
-  const [editTransaction, setEditTransaction] = useState({})
+  const [editTransaction, setEditTransaction] = useState({});
+  const [updatedEntryToggle, setUpdatedEntryToggle] = useState(true)
 
   useEffect(() => {
     getTransactions()
       .then((data) => {
         setTransactions(data);
-        // console.log(data)
       })
       .catch((err) => console.error(err));
 
-    // console.log(`this is transactions: ${transactions}`)
-  }, []);
+    // update the transactions if an entry has been updated
+  }, [updatedEntryToggle]);
 
   const width = useWindowWidth();
   const showTable = width >= 768;
-
-  const updateEntry = (e, updateObj) => {
+  console.log("rendered")
+  const updateEntry = (e, entry) => {
     e.stopPropagation();
-    setEditTransaction(prev => ({...prev, ...updateObj}))
+    setEditTransaction((prev) => ({ ...prev, ...entry}));
     setOpenEditModal(true);
   };
 
   return (
     <div className="p-8 w-full max-w-5xl mx-auto">
+      {/* Header */}
       <div className="flex flex-row items-center mb-5 w-full justify-between">
-        {/* Header */}
         <h1 className="text-xl font-bold text-gray-800 mr-5 align-center">
           Here are your transactions:
         </h1>
         <div>Sort By Dates:</div>
       </div>
+
+      {/* start transactions body */}
       {/* show table container for medium+ screen size */}
 
+      {openEditModal ? (
+        <TransactionModal
+          transactionEntry={editTransaction}
+          setOpenEditModal={setOpenEditModal}
+          setUpdatedEntryToggle={setUpdatedEntryToggle}
+        />
+      ) : null}
       {showTable ? (
         <div className="w-full overflow-x-auto border border-gray-200 rounded-lg shadow-sm bg-white">
-          {openEditModal ? <TransactionModal updateObj={editTransaction} setOpenEditModal={setOpenEditModal}/> : null}
           {/* table container */}
           <table className="table-auto w-full text-left border-collapse">
             <thead className="bg-gray-100 text-gray-700 uppercase text-sm">
@@ -65,10 +73,10 @@ const Transactions = () => {
                     <td className="px-4 py-3 border-b">
                       {transaction.transaction_date}
                     </td>
+                    <td className="px-4 py-3 border-b">{transaction.type}</td>
                     <td className="px-4 py-3 border-b">
                       {transaction.category}
                     </td>
-                    <td className="px-4 py-3 border-b">{transaction.type}</td>
                     <td className="px-4 py-3 border-b">
                       ${transaction.amount}
                     </td>
@@ -98,7 +106,7 @@ const Transactions = () => {
               <div
                 key={transaction.id}
                 className="flex flex-row bg-slate-100 hover:bg-white shadow-md mb-3 rounded-lg p-3 justify-between"
-                onClick={updateEntry}
+                onClick={(e) => updateEntry(e, transaction)}
               >
                 <div>
                   <div> {transaction.transaction_date} </div>
@@ -119,6 +127,7 @@ const Transactions = () => {
           )}
         </div>
       )}
+      {/* end transactions body */}
     </div>
   );
 };

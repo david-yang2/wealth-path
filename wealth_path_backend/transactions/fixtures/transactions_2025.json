@@ -33,6 +33,20 @@
       "user": 2,
       "type": "EXPENSE",
       "category": "TRANSPORTATION",
+      "amount": "560.00",
+      "currency": "USD",
+      "description": "Car Payment",
+      "transaction_date": "2025-01-01",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+    {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
       "amount": "162.5",
       "currency": "USD",
       "description": "Gas",
@@ -121,6 +135,20 @@
       "currency": "USD",
       "description": "Monthly rent",
       "transaction_date": "2025-02-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "560.00",
+      "currency": "USD",
+      "description": "Car Payment",
+      "transaction_date": "2025-02-01",
       "created_at": "2025-02-03T12:00:00Z",
       "updated_at": "2025-02-03T12:00:00Z"
     }
@@ -229,6 +257,20 @@
       "user": 2,
       "type": "EXPENSE",
       "category": "TRANSPORTATION",
+      "amount": "560.00",
+      "currency": "USD",
+      "description": "Car Payment",
+      "transaction_date": "2025-03-01",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
       "amount": "200.5",
       "currency": "USD",
       "description": "Gas",
@@ -303,6 +345,20 @@
       "currency": "USD",
       "description": "Bi-weekly paycheck",
       "transaction_date": "2025-03-18",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "560.00",
+      "currency": "USD",
+      "description": "Car Payment",
+      "transaction_date": "2025-04-01",
       "created_at": "2025-02-03T12:00:00Z",
       "updated_at": "2025-02-03T12:00:00Z"
     }
@@ -429,6 +485,20 @@
       "currency": "USD",
       "description": "Bi-weekly paycheck",
       "transaction_date": "2025-05-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "560.00",
+      "currency": "USD",
+      "description": "Car Payment",
+      "transaction_date": "2025-05-01",
       "created_at": "2025-02-03T12:00:00Z",
       "updated_at": "2025-02-03T12:00:00Z"
     }
@@ -565,6 +635,20 @@
       "user": 2,
       "type": "EXPENSE",
       "category": "TRANSPORTATION",
+      "amount": "560.00",
+      "currency": "USD",
+      "description": "Car Payment",
+      "transaction_date": "2025-06-01",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
       "amount": "200",
       "currency": "USD",
       "description": "Gas",
@@ -583,6 +667,20 @@
       "currency": "USD",
       "description": "Electricity, water, internet",
       "transaction_date": "2025-06-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+    {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-06-01",
       "created_at": "2025-02-03T12:00:00Z",
       "updated_at": "2025-02-03T12:00:00Z"
     }
@@ -653,6 +751,20 @@
       "currency": "USD",
       "description": "Monthly rent",
       "transaction_date": "2025-07-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "560.00",
+      "currency": "USD",
+      "description": "Car Payment",
+      "transaction_date": "2025-07-01",
       "created_at": "2025-02-03T12:00:00Z",
       "updated_at": "2025-02-03T12:00:00Z"
     }
@@ -775,6 +887,20 @@
       "user": 2,
       "type": "EXPENSE",
       "category": "TRANSPORTATION",
+      "amount": "560.00",
+      "currency": "USD",
+      "description": "Car Payment",
+      "transaction_date": "2025-08-01",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
       "amount": "310",
       "currency": "USD",
       "description": "Gas",
@@ -887,6 +1013,20 @@
       "user": 2,
       "type": "EXPENSE",
       "category": "TRANSPORTATION",
+      "amount": "560.00",
+      "currency": "USD",
+      "description": "Car Payment",
+      "transaction_date": "2025-09-01",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
       "amount": "230",
       "currency": "USD",
       "description": "Gas",
@@ -989,6 +1129,20 @@
       "currency": "USD",
       "description": "Gas",
       "transaction_date": "2025-10-02",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+      {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "560.00",
+      "currency": "USD",
+      "description": "Car Payment",
+      "transaction_date": "2025-10-01",
       "created_at": "2025-02-03T12:00:00Z",
       "updated_at": "2025-02-03T12:00:00Z"
     }
