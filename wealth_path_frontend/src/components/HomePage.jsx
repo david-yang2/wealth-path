@@ -6,7 +6,7 @@ const HomePage = () => {
   const {user} = useAuth();
   const navigate = useNavigate();
   return (
-    <div className="flex flex-1 flex-col md:flex-row justify-betwen items-center h-full max-w-[85%] md:max-w-[95%]">
+    <div className="flex flex-1 flex-col md:flex-row justify-betwen items-center h-full max-w-[85%] md:max-w-6xl">
       {/* image */}
       <div className="w-full max-w-[70%] md:max-w-[95%] aspect-square mx-auto rounded-2xl overflow-hidden flex items-center justify-center">
         <img
