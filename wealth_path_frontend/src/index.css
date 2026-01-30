@@ -24,3 +24,22 @@ body {
 #navmodal-container > nav > a > i {
     @apply mr-2
 }
+
+
+/* TransactionModal */
+/* #edit-transaction-form{
+    background-color: blueviolet;
+} */
+
+#edit-transaction-form > div {
+    @apply flex flex-row mb-[5px] px-[15px]
+
+}  
+
+#edit-transaction-form > div > label {
+    @apply w-[150px]
+}
+
+#edit-transaction-form > div > input {
+    @apply px-[8px] py-[2px] rounded-md
+}
