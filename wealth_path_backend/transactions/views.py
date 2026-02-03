@@ -39,6 +39,35 @@ class UserTransactionsListAPIView(generics.ListAPIView):
         return qs.filter(user=self.request.user).order_by("-transaction_date")
 
 
+class MonthlyTransactionAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        user = request.user
+
+        # extract params from browsers
+        start_date = request.query_params.get("start_date")
+        end_date = request.query_params.get("end_date")
+
+
+        #get users transactions
+        qs = Transaction.objects.filter(user=user)
+
+        # filter it by date
+
+        # convert param string to date object
+        sd = datetime.strptime(start_date, "%Y-%m-%d").date()
+        # filter query
+        qs = qs.filter(transaction_date__gte=sd)
+
+        ed = datetime.strptime(end_date, "%Y-%m-%d").date()
+        # fitler query again with end date
+        qs = qs.filter(transaction_date__lte=ed)
+
+        transactions = TransactionSerializer(qs, many=True)
+
+        return Response(transactions.data)
+        
 
 
 class TransactionTotalsAPIView(APIView):
