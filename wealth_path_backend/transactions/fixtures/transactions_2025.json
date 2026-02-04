@@ -1216,5 +1216,1293 @@
       "created_at": "2025-02-03T12:00:00Z",
       "updated_at": "2025-02-03T12:00:00Z"
     }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-11-15",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-11-30",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "DIVIDEND",
+      "amount": "45.00",
+      "currency": "USD",
+      "description": "monthly dividends",
+      "transaction_date": "2025-11-15",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "RENT",
+      "amount": "1300.00",
+      "currency": "USD",
+      "description": "Monthly Rent",
+      "transaction_date": "2025-11-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "UTILITIES",
+      "amount": "227.04",
+      "currency": "USD",
+      "description": "monthly utilities",
+      "transaction_date": "2025-11-10",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "HEALTH",
+      "amount": "109.03",
+      "currency": "USD",
+      "description": "monthly premium",
+      "transaction_date": "2025-11-08",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "19.44",
+      "currency": "USD",
+      "description": "Bakery Purchase",
+      "transaction_date": "2025-11-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "12.54",
+      "currency": "USD",
+      "description": "Restaurant dinner",
+      "transaction_date": "2025-11-13",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "28.66",
+      "currency": "USD",
+      "description": "Lunch",
+      "transaction_date": "2025-11-16",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "26.56",
+      "currency": "USD",
+      "description": "Late-night snack",
+      "transaction_date": "2025-11-20",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "25.45",
+      "currency": "USD",
+      "description": "Restaurant dinner",
+      "transaction_date": "2025-11-29",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "24.23",
+      "currency": "USD",
+      "description": "Weekly Groceries",
+      "transaction_date": "2025-11-30",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "13.17",
+      "currency": "USD",
+      "description": "Restaurant dinner",
+      "transaction_date": "2025-11-30",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "14.25",
+      "currency": "USD",
+      "description": "Lunch",
+      "transaction_date": "2025-11-17",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "16.75",
+      "currency": "USD",
+      "description": "Takeout dinner",
+      "transaction_date": "2025-11-07",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "31.25",
+      "currency": "USD",
+      "description": "UBER/LYFT",
+      "transaction_date": "2025-11-13",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "25.37",
+      "currency": "USD",
+      "description": "UBER/LYFT",
+      "transaction_date": "2025-1-23",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "30.42",
+      "currency": "USD",
+      "description": "gas",
+      "transaction_date": "2025-11-26",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "52.17",
+      "currency": "USD",
+      "description": "Arcade",
+      "transaction_date": "2025-11-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "51.40",
+      "currency": "USD",
+      "description": "Concert",
+      "transaction_date": "2025-11-12",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "33.18",
+      "currency": "USD",
+      "description": "Movies",
+      "transaction_date": "2025-11-17",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "40.92",
+      "currency": "USD",
+      "description": "Sports Game",
+      "transaction_date": "2025-11-20",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "59.17",
+      "currency": "USD",
+      "description": "Arcade",
+      "transaction_date": "2025-11-21",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "32.47",
+      "currency": "USD",
+      "description": "Arcade",
+      "transaction_date": "2025-11-26",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "33.68",
+      "currency": "USD",
+      "description": "Comedy Show",
+      "transaction_date": "2025-11-28",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "51.14",
+      "currency": "USD",
+      "description": "Arcade",
+      "transaction_date": "2025-11-29",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+    {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-12-15",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2025-12-30",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "DIVIDEND",
+      "amount": "45.00",
+      "currency": "USD",
+      "description": "monthly dividends",
+      "transaction_date": "2025-12-15",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "RENT",
+      "amount": "1300.00",
+      "currency": "USD",
+      "description": "Monthly Rent",
+      "transaction_date": "2025-12-13",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "UTILITIES",
+      "amount": "205.48",
+      "currency": "USD",
+      "description": "monthly utilities",
+      "transaction_date": "2025-12-09",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "HEALTH",
+      "amount": "118.04",
+      "currency": "USD",
+      "description": "monthly premium",
+      "transaction_date": "2025-12-10",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "16.82",
+      "currency": "USD",
+      "description": "Grocery Store Run",
+      "transaction_date": "2025-12-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "25.50",
+      "currency": "USD",
+      "description": "Coffee and pastry",
+      "transaction_date": "2025-12-08",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "22.18",
+      "currency": "USD",
+      "description": "Grocery Store Run",
+      "transaction_date": "2025-12-10",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "26.30",
+      "currency": "USD",
+      "description": "Takeout dinner",
+      "transaction_date": "2025-12-15",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "8.16",
+      "currency": "USD",
+      "description": "Grocery Store Run",
+      "transaction_date": "2025-12-22",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "26.99",
+      "currency": "USD",
+      "description": "Grocery Store Run",
+      "transaction_date": "2025-12-25",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "28.87",
+      "currency": "USD",
+      "description": "gas",
+      "transaction_date": "2025-12-06",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "26.67",
+      "currency": "USD",
+      "description": "UBER/LYFT",
+      "transaction_date": "2025-12-12",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "32.47",
+      "currency": "USD",
+      "description": "UBER/LYFT",
+      "transaction_date": "2025-12-23",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "49.76",
+      "currency": "USD",
+      "description": "Sports Game",
+      "transaction_date": "2025-12-06",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "59.94",
+      "currency": "USD",
+      "description": "Concert",
+      "transaction_date": "2025-12-15",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "41.57",
+      "currency": "USD",
+      "description": "Comedy Show",
+      "transaction_date": "2025-12-23",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "46.31",
+      "currency": "USD",
+      "description": "Concert",
+      "transaction_date": "2025-12-25",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "46.12",
+      "currency": "USD",
+      "description": "Sports Game",
+      "transaction_date": "2025-12-30",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+    {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2026-01-15",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2026-01-30",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "DIVIDEND",
+      "amount": "45.00",
+      "currency": "USD",
+      "description": "monthly dividends",
+      "transaction_date": "2026-01-13",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "RENT",
+      "amount": "1300.00",
+      "currency": "USD",
+      "description": "Monthly Rent",
+      "transaction_date": "2026-01-12",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "UTILITIES",
+      "amount": "207.69",
+      "currency": "USD",
+      "description": "monthly utilities",
+      "transaction_date": "2026-01-09",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "HEALTH",
+      "amount": "115.99",
+      "currency": "USD",
+      "description": "monthly premium",
+      "transaction_date": "2026-01-10",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "21.27",
+      "currency": "USD",
+      "description": "Coffee and pastry",
+      "transaction_date": "2026-01-01",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "13.85",
+      "currency": "USD",
+      "description": "Lunch",
+      "transaction_date": "2026-01-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "15.16",
+      "currency": "USD",
+      "description": "Restaurant dinner",
+      "transaction_date": "2026-01-10",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "20.88",
+      "currency": "USD",
+      "description": "Restaurant dinner",
+      "transaction_date": "2026-01-15",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "9.77",
+      "currency": "USD",
+      "description": "Weekly Groceries",
+      "transaction_date": "2026-01-18",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "23.27",
+      "currency": "USD",
+      "description": "Takeout dinner",
+      "transaction_date": "2026-01-19",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "12.03",
+      "currency": "USD",
+      "description": "Farmers Market produce",
+      "transaction_date": "2026-01-24",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "15.35",
+      "currency": "USD",
+      "description": "Restaurant dinner",
+      "transaction_date": "2026-01-27",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "24.97",
+      "currency": "USD",
+      "description": "gas",
+      "transaction_date": "2026-01-09",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "34.55",
+      "currency": "USD",
+      "description": "gas",
+      "transaction_date": "2026-01-12",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "20.76",
+      "currency": "USD",
+      "description": "gas",
+      "transaction_date": "2026-01-20",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "28.33",
+      "currency": "USD",
+      "description": "UBER/LYFT",
+      "transaction_date": "2026-01-22",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "44.59",
+      "currency": "USD",
+      "description": "Movies",
+      "transaction_date": "2026-01-16",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "59.08",
+      "currency": "USD",
+      "description": "Arcade",
+      "transaction_date": "2026-01-17",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "48.26",
+      "currency": "USD",
+      "description": "Concert",
+      "transaction_date": "2026-01-20",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "34.84",
+      "currency": "USD",
+      "description": "Arcade",
+      "transaction_date": "2026-01-21",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "39.46",
+      "currency": "USD",
+      "description": "Arcade",
+      "transaction_date": "2026-01-25",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "55.24",
+      "currency": "USD",
+      "description": "Arcade",
+      "transaction_date": "2026-01-28",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+    {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2026-02-15",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "PAYCHECK",
+      "amount": "2900.00",
+      "currency": "USD",
+      "description": "Bi-weekly paycheck",
+      "transaction_date": "2026-02-28",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "INCOME",
+      "category": "DIVIDEND",
+      "amount": "45.00",
+      "currency": "USD",
+      "description": "monthly dividends",
+      "transaction_date": "2026-02-12",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "RENT",
+      "amount": "1300.00",
+      "currency": "USD",
+      "description": "Monthly Rent",
+      "transaction_date": "2026-02-07",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "UTILITIES",
+      "amount": "223.94",
+      "currency": "USD",
+      "description": "monthly utilities",
+      "transaction_date": "2026-02-07",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "HEALTH",
+      "amount": "107.05",
+      "currency": "USD",
+      "description": "monthly premium",
+      "transaction_date": "2026-02-12",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "22.00",
+      "currency": "USD",
+      "description": "Farmers Market produce",
+      "transaction_date": "2026-02-03",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "8.75",
+      "currency": "USD",
+      "description": "Weekly Groceries",
+      "transaction_date": "2026-02-05",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "22.76",
+      "currency": "USD",
+      "description": "Lunch",
+      "transaction_date": "2026-02-09",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "29.62",
+      "currency": "USD",
+      "description": "Restaurant dinner",
+      "transaction_date": "2026-02-12",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "11.75",
+      "currency": "USD",
+      "description": "Weekly Groceries",
+      "transaction_date": "2026-02-21",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "23.62",
+      "currency": "USD",
+      "description": "Grocery Store Run",
+      "transaction_date": "2026-02-22",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "14.78",
+      "currency": "USD",
+      "description": "Takeout dinner",
+      "transaction_date": "2026-02-25",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "FOOD",
+      "amount": "17.58",
+      "currency": "USD",
+      "description": "Weekly Groceries",
+      "transaction_date": "2026-02-26",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "22.03",
+      "currency": "USD",
+      "description": "gas",
+      "transaction_date": "2026-02-06",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "22.76",
+      "currency": "USD",
+      "description": "UBER/LYFT",
+      "transaction_date": "2026-02-07",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "TRANSPORTATION",
+      "amount": "27.87",
+      "currency": "USD",
+      "description": "UBER/LYFT",
+      "transaction_date": "2026-02-09",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "31.97",
+      "currency": "USD",
+      "description": "Concert",
+      "transaction_date": "2026-02-12",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "43.30",
+      "currency": "USD",
+      "description": "Arcade",
+      "transaction_date": "2026-02-25",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "57.94",
+      "currency": "USD",
+      "description": "Comedy Show",
+      "transaction_date": "2026-02-26",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "45.24",
+      "currency": "USD",
+      "description": "Concert",
+      "transaction_date": "2026-02-06",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "fields": {
+      "user": 2,
+      "type": "EXPENSE",
+      "category": "ENTERTAINMENT",
+      "amount": "31.82",
+      "currency": "USD",
+      "description": "Movies",
+      "transaction_date": "2026-02-17",
+      "created_at": "2025-02-03T12:00:00Z",
+      "updated_at": "2025-02-03T12:00:00Z"
+    }
   }
 ]
