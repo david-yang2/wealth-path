@@ -24,11 +24,14 @@ const App = () => {
     const showNavBar = width >= 768 || location.pathname !== "/";
 
     return (
-      <div className="flex flex-col h-full w-full">
+      <div className="flex flex-col h-full w-full"
+      id="app">
         <div className="w-full flex justify-center">
           {showNavBar && <NavBar />}
         </div>
-        <div className="flex flex-1 justify-center">
+        <div 
+          id="main"
+          className="flex flex-1 justify-center bg-green-300">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login />} />
@@ -62,6 +65,8 @@ const App = () => {
     );
   };
 
+
+  // App
   return (
     <AuthProvider>
       <div className="flex flex-col h-full w-full">
