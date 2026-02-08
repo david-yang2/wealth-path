@@ -9,7 +9,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const [error, setError] = useState("");
-  const { setUser } = useAuth();
+  const { setUser, protectedRouteMessage, setProtectedRouteMessage } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,17 +33,21 @@ const Login = () => {
         const authdata = await checkauth();
         if (authdata?.isAuthenticated) setUser(authdata.username);
       setError("");
-      navigate(`/transactions`);
+      setProtectedRouteMessage("")
+      navigate(`/dashboard`);
 
     } catch (err) {
+      setProtectedRouteMessage("")
       setError(err.message);
     }
   };
 
+
   return (
     <div id="login-component" className="w-full h-full flex items-start md:items-center md:w-auto">
       <div id="login-container" className="flex flex-col items-center md:items-start justify-center w-full h-auto py-10 bg-slate-100 md:px-10 md:py-[20%] rounded-lg">
-        <h2 className="text-3xl font-bold mb-2">Please Login:</h2>
+        {protectedRouteMessage && (<div className="text-red-500 mb-3">{protectedRouteMessage}</div>)}
+        <h2 className="text-3xl font-bold mb-2">Login:</h2>
         <form className="flex flex-col" onSubmit={handleSubmit}>
           <input
             type="text"
