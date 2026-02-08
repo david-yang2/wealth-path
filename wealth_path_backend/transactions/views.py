@@ -51,7 +51,7 @@ class MonthlyTransactionAPIView(APIView):
 
 
         #get users transactions
-        qs = Transaction.objects.filter(user=user)
+        qs = Transaction.objects.filter(user=user).order_by('-transaction_date')
 
         # filter it by date
 
