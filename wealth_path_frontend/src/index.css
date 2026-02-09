@@ -43,3 +43,7 @@ body {
 #edit-transaction-form > div > input {
     @apply px-[8px] py-[2px] rounded-md
 }
+
+#balance-selection > div {
+    @apply underline mr-3 cursor-pointer text-xl
+}
