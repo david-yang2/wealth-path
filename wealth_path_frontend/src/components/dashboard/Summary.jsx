@@ -3,12 +3,16 @@ import { useState, useEffect } from "react";
 import { getTotals } from "../transactionsApi";
 
 const Summary = (props) => {
+  const { currentDateStr, year, month } = props;
   const [totalIncome, setTotalIncome] = useState(0);
   const [totalExpense, setTotalExpense] = useState(0);
-  const [balanceStartDate, setBalanceStartDate] = useState();
+  const [balanceStartDate, setBalanceStartDate] = useState(
+    `${year}-${month}-01`,
+  );
   const [selectedReturn, setSelectedReturn] = useState("Monthly");
 
-  const { currentDateStr, year, month } = props;
+  const [inceptionTotalIncome, setInceptionTotalIncome] = useState(0);
+  const [inceptionTotalExpense, setInceptionTotalExpense] = useState(0);
 
   useEffect(() => {
     getTotals(balanceStartDate, currentDateStr)
@@ -17,10 +21,19 @@ const Summary = (props) => {
         setTotalExpense(data.total_expense);
       })
       .catch((err) => console.error(err));
+    getTotals("2000-01-01", currentDateStr)
+      .then((data) => {
+        setInceptionTotalIncome(data.total_income);
+        setInceptionTotalExpense(data.total_expense);
+      })
+      .catch((err) => console.erorr(err));
   }, [currentDateStr, balanceStartDate]);
 
-  const savings = (totalIncome - totalExpense).toFixed(2);
-  const expenseRatio = ((totalExpense / totalIncome) * 100).toFixed(2);
+  const inceptionSavings = inceptionTotalIncome - inceptionTotalExpense;
+
+  const savings = totalIncome > 0 ? (totalIncome - totalExpense).toFixed(2) : 0;
+  const expenseRatio =
+    totalIncome > 0 ? ((totalExpense / totalIncome) * 100).toFixed(2) : 100;
   const percentage = ((savings / totalIncome) * 100).toFixed(2);
 
   // style for selected time frame
@@ -32,7 +45,7 @@ const Summary = (props) => {
         <div className="flex justify-start mb-10">
           <div className="text-xl mb-3 mr-10 underline"> Account Balance: </div>
           <div className="text-xl font-bold ">
-            ${Number(savings).toLocaleString()}
+            ${Number(inceptionSavings).toLocaleString()}
           </div>
         </div>
 
@@ -59,7 +72,10 @@ const Summary = (props) => {
           </div>
 
           {/* time frame and label */}
-          <div className="flex flex-col ml-6 justify-between" id="balance-content">
+          <div
+            className="flex flex-col ml-6 justify-between"
+            id="balance-content"
+          >
             <div className="flex flex-col justify-start">
               <div
                 id="balance-selection"
@@ -95,11 +111,27 @@ const Summary = (props) => {
               </div>
               <div className="text-md mb-3">
                 {" "}
-                Total income: ${Number(totalIncome).toLocaleString()}
+                Total income: $
+                {Number(totalIncome).toLocaleString("en-US", {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
               </div>
               <div className="text-md mb-3">
                 {" "}
-                Total expense: ${Number(totalExpense).toLocaleString()}
+                Total expense: $
+                {Number(totalExpense).toLocaleString("en-US", {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
+              </div>
+              <div className="text-md font-bold mb-3">
+                {" "}
+                {selectedReturn} savings: $
+                {Number(savings).toLocaleString("en-US", {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
               </div>
             </div>
             {/* legend */}
