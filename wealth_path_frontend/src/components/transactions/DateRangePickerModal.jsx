@@ -7,7 +7,16 @@ const DateRangePickerModal = (props) => {
   const [calendarStartDate, setCalendarStartDate] = useState(new Date());
   const [calendarEndDate, setCalendarEndDate] = useState(new Date());
 
-  const { setCalendarToggle, getTransactions, setTransactions } = props;
+  const {
+    setCalendarToggle,
+    getTransactions,
+    setTransactions,
+    setIsFiltered,
+    setFormattedEnd,
+    setFormattedStart,
+    formattedEnd,
+    formattedStart
+  } = props;
 
   const todaysDate = new Date();
 
@@ -23,33 +32,31 @@ const DateRangePickerModal = (props) => {
     // }
   };
 
-
   // converting start date object to str
 
-  const startYear = calendarStartDate.getFullYear()
-  const startMonth = String(calendarStartDate.getMonth() + 1).padStart(2,"0")
-  const startDay = String(calendarStartDate.getDate()).padStart(2,"0")
+  const startYear = calendarStartDate.getFullYear();
+  const startMonth = String(calendarStartDate.getMonth() + 1).padStart(2, "0");
+  const startDay = String(calendarStartDate.getDate()).padStart(2, "0");
 
-  const formattedStart = `${startYear}-${startMonth}-${startDay}`
+  setFormattedStart(`${startYear}-${startMonth}-${startDay}`);
 
   // converting end date object to str
 
-  const endYear = calendarEndDate.getFullYear()
-  const endMonth = String(calendarEndDate.getMonth() +1).padStart(2, "0")
-  const endDay = String(calendarEndDate.getDate()).padStart(2, "0")
+  const endYear = calendarEndDate.getFullYear();
+  const endMonth = String(calendarEndDate.getMonth() + 1).padStart(2, "0");
+  const endDay = String(calendarEndDate.getDate()).padStart(2, "0");
 
-  const formattedEnd = `${endYear}-${endMonth}-${endDay}`
+  setFormattedEnd(`${endYear}-${endMonth}-${endDay}`);
 
-
-
-  console.log(calendarStartDate)
+  console.log(calendarStartDate);
 
   const applyDates = () => {
-    console.log(formattedStart, formattedEnd)
+    console.log(formattedStart, formattedEnd);
     getTransactions(formattedStart, formattedEnd)
-    .then(data => setTransactions(data))
-    .catch(err => console.error(err))
-    setCalendarToggle(false)
+      .then((data) => setTransactions(data))
+      .catch((err) => console.error(err));
+    setCalendarToggle(false);
+    setIsFiltered(true);
   };
 
   const selectionRange = {
@@ -71,7 +78,7 @@ const DateRangePickerModal = (props) => {
       ></div>
       {/* DateRangePicker component */}
       <div
-        className="absolute right-0 top-0 z-50"
+        className="absolute right-0 top-0 z-50 flex flex-col items-end"
         onClick={(e) => e.stopPropagation()}
       >
         <div>
@@ -82,7 +89,7 @@ const DateRangePickerModal = (props) => {
           />
         </div>
         <button
-          className="align-right bg-green-200 rounded-md px-3 py-22"
+          className="align-right bg-green-200"
           onClick={applyDates}
         >
           Apply Dates
