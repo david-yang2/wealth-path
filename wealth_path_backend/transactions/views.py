@@ -36,7 +36,29 @@ class UserTransactionsListAPIView(generics.ListAPIView):
     def get_queryset(self):
         qs = super().get_queryset()
         # Filter transactions by the current user and sort by date (newest first)
-        return qs.filter(user=self.request.user).order_by("-transaction_date")
+        qs = qs.filter(user=self.request.user).order_by("-transaction_date")
+        
+        # extract params from browsers
+        start_date = self.request.query_params.get("start_date")
+        end_date = self.request.query_params.get("end_date")
+
+        # Apply start_date filter if provided
+        if start_date:
+            try:
+                sd = datetime.strptime(start_date, "%Y-%m-%d").date()
+                qs = qs.filter(transaction_date__gte=sd)
+            except ValueError:
+                pass  # ignore invalid dates or handle with validation
+
+        # Apply end_date filter if provided
+        if end_date:
+            try:
+                ed = datetime.strptime(end_date, "%Y-%m-%d").date()
+                qs = qs.filter(transaction_date__lte=ed)
+            except ValueError:
+                pass
+
+        return  qs
 
 
 class MonthlyTransactionAPIView(APIView):

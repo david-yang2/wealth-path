@@ -1,6 +1,10 @@
-const BASE_URL= import.meta.env.VITE_BASE_API_URL
+const BASE_URL = import.meta.env.VITE_BASE_API_URL;
 
-async function apiFetchUserTransactions(endpoint, options = {}, method = "GET") {
+async function apiFetchUserTransactions(
+  endpoint,
+  options = {},
+  method = "GET",
+) {
   // helper to perform the fetch
   async function fetchData() {
     const response = await fetch(`${BASE_URL}${endpoint}`, {
@@ -46,35 +50,59 @@ async function apiFetchUserTransactions(endpoint, options = {}, method = "GET") 
   return response.json();
 }
 
+export function getTransactions(start_date, end_date) {
+  let url = "/transactions"
 
-export function getTransactions(){
-    return apiFetchUserTransactions('/transactions/')
+  const params = []
+
+  if (start_date) params.push(`start_date=${start_date}`);
+  if (end_date) params.push(`end_date=${end_date}`);
+
+  if (params.length > 0) {
+    url += `?${params.join("&")}`;
+  }
+  return apiFetchUserTransactions(url);
 }
 
-export function getTotals(start_date, end_date){
+export function getTotals(start_date, end_date) {
   // base URL
-  let url = "/transactions/totals"
+  let url = "/transactions/totals";
 
   // array for params
-  const params = []
-  if (start_date) params.push(`start_date=${start_date}`)
-  if (end_date) params.push(`end_date=${end_date}`)
-  
+  const params = [];
+  if (start_date) params.push(`start_date=${start_date}`);
+  if (end_date) params.push(`end_date=${end_date}`);
+
   // if there are any params concatenate them
   if (params.length > 0) {
-    url += `?${params.join('&')}`
+    url += `?${params.join("&")}`;
   }
 
   // use the final URL and fetch
-  return apiFetchUserTransactions(url)
+  return apiFetchUserTransactions(url);
 }
 
+export function getMonthlyTransaction(start_date, end_date) {
+  let url = "/transactions/monthly-transaction";
 
-export function updateTransactionEntry(uuid, data){
+  const params = [];
+  if (start_date) params.push(`start_date=${start_date}`);
+  if (end_date) params.push(`end_date=${end_date}`);
+
+  if (params.length > 0) {
+    url += `?${params.join("&")}`;
+  }
+  console.log(url)
+
+  return apiFetchUserTransactions(url);
+}
+
+export function updateTransactionEntry(uuid, data) {
   return apiFetchUserTransactions(
-  `/transactions/${uuid}/`, 
-  {
-  body: JSON.stringify(data)
-  }, 
-  "PATCH")
+    `/transactions/${uuid}/`,
+    {
+      body: JSON.stringify(data),
+    },
+    "PATCH",
+  );
 }
