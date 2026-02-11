@@ -5,7 +5,7 @@ import {
   Link,
   useLocation,
 } from "react-router-dom";
-import Transactions from "./components/Transactions";
+import Transactions from "./components/transactions/Transactions";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
 import HomePage from "./components/HomePage";

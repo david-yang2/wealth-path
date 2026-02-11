@@ -1,10 +1,17 @@
-const DashboardCard = ({children}) => {
-    return (
-        <div className="bg-slate-100 hover:bg-white rounded-lg shadow p-5 hover:shadow-lg ">
+const DashboardCard = ({ children }) => {
+  return (
+    <div className="
+      bg-white
+      rounded-2xl
+      border border-gray-100
+      shadow-sm
+      p-6
+      transition
+      hover:shadow-md
+    ">
+      {children}
+    </div>
+  );
+};
 
-            {children}
-        </div>
-    )
-}
-
-export default DashboardCard
+export default DashboardCard;

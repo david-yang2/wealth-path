@@ -78,7 +78,7 @@ const DateRangePickerModal = (props) => {
       ></div>
       {/* DateRangePicker component */}
       <div
-        className="absolute right-0 top-0 z-50 flex flex-col items-end"
+        className="absolute right-0 top-0 z-50 flex flex-col items-end bg-white pb-2"
         onClick={(e) => e.stopPropagation()}
       >
         <div>
