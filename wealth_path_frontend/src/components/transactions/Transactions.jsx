@@ -4,16 +4,22 @@ import { useEffect } from "react";
 import useWindowWidth from "../useWindowWidth";
 import TransactionModal from "./TransactionModal";
 import DateRangePickerModal from "./DateRangePickerModal";
+import ConfirmationModal from "./ConfirmationModal";
 
 const Transactions = () => {
   const [transactions, setTransactions] = useState([]);
   const [openEditModal, setOpenEditModal] = useState(false);
+
+  // save selected transaction as edit transaction 
   const [editTransaction, setEditTransaction] = useState({});
   const [updatedEntryToggle, setUpdatedEntryToggle] = useState(true);
   const [calendarToggle, setCalendarToggle] = useState(false);
   const [isFiltered, setIsFiltered] = useState(false);
   const [formattedStart, setFormattedStart] = useState();
   const [formattedEnd, setFormattedEnd] = useState();
+
+  // state for confirmation modal
+  const [confirmToggle, setConfirmToggle] = useState(false);
 
   useEffect(() => {
     getTransactions()
@@ -25,16 +31,20 @@ const Transactions = () => {
     // update the transactions if an entry has been updated
   }, [updatedEntryToggle]);
 
-  console.log("refreshed?")
+  console.log("refreshed?");
 
   const width = useWindowWidth();
   const showTable = width >= 768;
+
+
+  // create edit object and open transaction modal
   const updateEntry = (e, entry) => {
     e.stopPropagation();
+
+    // take selected transaction and set it as the editTransaction
     setEditTransaction((prev) => ({ ...prev, ...entry }));
     setOpenEditModal(true);
   };
-
 
   const clearFilter = () => {
     getTransactions()
@@ -42,9 +52,8 @@ const Transactions = () => {
         setTransactions(data);
       })
       .catch((err) => console.error(err));
-    setIsFiltered(false)
-  }
-
+    setIsFiltered(false);
+  };
 
   return (
     <div className="p-8 w-full max-w-5xl mx-auto">
@@ -54,35 +63,54 @@ const Transactions = () => {
           Here are your transactions:
         </h1>
         <div onClick={() => setCalendarToggle(true)} className="cursor-pointer">
-          {!isFiltered ? (<div> Sort Dates: <i className="fa-solid fa-angle-down"></i></div>) :
-                        (<div onClick={(e) => e.stopPropagation()}
-                              className="flex flex-col items-end">
-                          <div> Filtered From: {formattedStart} - {formattedEnd} </div>
-                          <button onClick={
-                            clearFilter}>Clear Filter</button>
-                        </div>)}
+          {!isFiltered ? (
+            <div>
+              {" "}
+              Sort Dates: <i className="fa-solid fa-angle-down"></i>
+            </div>
+          ) : (
+            <div
+              onClick={(e) => e.stopPropagation()}
+              className="flex flex-col items-end"
+            >
+              <div>
+                {" "}
+                Filtered From: {formattedStart} - {formattedEnd}{" "}
+              </div>
+              <button onClick={clearFilter}>Clear Filter</button>
+            </div>
+          )}
         </div>
-        {calendarToggle && <DateRangePickerModal 
-                            setTransactions={setTransactions} 
-                            getTransactions={getTransactions} 
-                            setCalendarToggle={setCalendarToggle}
-                            setIsFiltered={setIsFiltered} 
-                            setFormattedEnd={setFormattedEnd}
-                            setFormattedStart={setFormattedStart}
-                            formattedStart={formattedStart}
-                            formattedEnd={formattedEnd}/>}
+        {calendarToggle && (
+          <DateRangePickerModal
+            setTransactions={setTransactions}
+            getTransactions={getTransactions}
+            setCalendarToggle={setCalendarToggle}
+            setIsFiltered={setIsFiltered}
+            setFormattedEnd={setFormattedEnd}
+            setFormattedStart={setFormattedStart}
+            formattedStart={formattedStart}
+            formattedEnd={formattedEnd}
+          />
+        )}
       </div>
+      
 
-      {/* start transactions body */}
-      {/* show table container for medium+ screen size */}
-
+      {/* conditionally render Transaction Modal */}
       {openEditModal ? (
         <TransactionModal
           transactionEntry={editTransaction}
           setOpenEditModal={setOpenEditModal}
           setUpdatedEntryToggle={setUpdatedEntryToggle}
+          setConfirmToggle={setConfirmToggle}
         />
       ) : null}
+
+      {/* conditionally render delete confirmation modal */}
+      {confirmToggle && <ConfirmationModal transactionEntry={editTransaction}setConfirmToggle={setConfirmToggle} setOpenEditModal={setOpenEditModal} setTransactions={setTransactions}/>}
+
+      {/* start transactions body */}
+      {/* show table container for medium+ screen size */}
       {showTable ? (
         <div className="w-full overflow-x-auto border border-gray-200 rounded-lg shadow-sm bg-white">
           {/* table container */}

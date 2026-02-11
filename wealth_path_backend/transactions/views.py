@@ -179,3 +179,14 @@ class UpdateTransactionAPIView(generics.RetrieveUpdateAPIView):
     def get_queryset(self):
         # Only expose transactions that belong to the authenticated user
         return Transaction.objects.filter(user=self.request.user)
+    
+
+# remove transaction
+class RemoveTransactionAPIView(generics.RetrieveDestroyAPIView):
+    serializer_class = TransactionSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        # Only expose transactions that belong to the authenticated user
+        return Transaction.objects.filter(user=self.request.user)
+    

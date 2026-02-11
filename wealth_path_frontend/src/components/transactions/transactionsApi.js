@@ -47,13 +47,17 @@ async function apiFetchUserTransactions(
     }
   }
 
+  if (response.status === 204) {
+    return null;
+  }
+
   return response.json();
 }
 
 export function getTransactions(start_date, end_date) {
-  let url = "/transactions"
+  let url = "/transactions";
 
-  const params = []
+  const params = [];
 
   if (start_date) params.push(`start_date=${start_date}`);
   if (end_date) params.push(`end_date=${end_date}`);
@@ -92,7 +96,7 @@ export function getMonthlyTransaction(start_date, end_date) {
   if (params.length > 0) {
     url += `?${params.join("&")}`;
   }
-  console.log(url)
+  console.log(url);
 
   return apiFetchUserTransactions(url);
 }
@@ -104,5 +108,14 @@ export function updateTransactionEntry(uuid, data) {
       body: JSON.stringify(data),
     },
     "PATCH",
+  );
+}
+
+export function removeEntry(uuid) {
+  console.log(`/transactions/remove/${uuid}/`);
+  return apiFetchUserTransactions(
+    `/transactions/remove/${uuid}/`,
+    undefined,
+    "DELETE",
   );
 }

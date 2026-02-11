@@ -1,8 +1,8 @@
-import { updateTransactionEntry } from "./transactionsApi";
+import { updateTransactionEntry, removeEntry } from "./transactionsApi";
 import { useState } from "react";
 
 const TransactionModal = (props) => {
-  const { setOpenEditModal, transactionEntry, setUpdatedEntryToggle } = props;
+  const { setOpenEditModal, transactionEntry, setUpdatedEntryToggle, setConfirmToggle } = props;
 
   // state
   const [transactionDate, setTransactionDate] = useState(
@@ -12,6 +12,7 @@ const TransactionModal = (props) => {
   const [type, setType] = useState(transactionEntry.type);
   const [amount, setAmount] = useState(transactionEntry.amount);
   const [description, setDescription] = useState(transactionEntry.description);
+
 
   const updateEntry = async (e) => {
     e.preventDefault();
@@ -44,7 +45,13 @@ const TransactionModal = (props) => {
 
   }
 
-  console.log(categoryOptions[type])
+  const confirmDelete = async (e) => {
+    e.preventDefault()
+    setConfirmToggle(true)
+    setOpenEditModal(false)
+
+    // await removeEntry(transactionEntry.id)
+  }
 
   return (
     <div
@@ -123,14 +130,19 @@ const TransactionModal = (props) => {
               onChange={(e) => setDescription(e.target.value)}
             />
           </div>
+          <div className="flex flex-row justify-end">
 
           <button
-            className="bg-green-400 px-3 py-1 rounded-md font-bold text-lg"
+            className="bg-green-400 px-3 py-1 mr-6 rounded-md font-bold text-lg"
             type="submit"
-          >
+            >
             {" "}
             Save{" "}
           </button>
+          <button className="bg-red-600 text-white px-3 py-1"
+                  onClick={(e) => confirmDelete(e)}>Delete</button>
+
+            </div>
         </form>
       </div>
     </div>
