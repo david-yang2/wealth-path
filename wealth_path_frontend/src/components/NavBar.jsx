@@ -13,7 +13,7 @@ const NavBar = () => {
       id="nav-component"
       className="bg-black w-full flex flex-row justify-center items-center px-[2.5%] py-5"
     >
-      <div className="w-full flex flex-row justify-between max-w-6xl">
+      <div className="w-full flex flex-row justify-between max-w-6xl relative">
         <div
           className="text-4xl text-white font-bold flex items-center"
           onClick={() => navigate("/")}
@@ -25,8 +25,10 @@ const NavBar = () => {
         <div>
           <i
             onClick={() => setOpenMenu(true)}
-            className="fa-solid fa-bars text-4xl text-white relative"
-          ></i>
+            className="fa-solid fa-bars text-4xl text-white"
+          >
+
+          </i>
           {openMenu ? (
             <NavModal user={user} onClose={() => setOpenMenu(false)} />
           ) : null}
