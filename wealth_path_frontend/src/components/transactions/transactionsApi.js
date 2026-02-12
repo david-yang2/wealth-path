@@ -112,10 +112,19 @@ export function updateTransactionEntry(uuid, data) {
 }
 
 export function removeEntry(uuid) {
-  console.log(`/transactions/remove/${uuid}/`);
   return apiFetchUserTransactions(
     `/transactions/remove/${uuid}/`,
     undefined,
     "DELETE",
+  );
+}
+
+export function postTransaction(data) {
+  return apiFetchUserTransactions(
+    "/transactions/add/",
+    {
+      body: JSON.stringify(data),
+    },
+    "POST",
   );
 }

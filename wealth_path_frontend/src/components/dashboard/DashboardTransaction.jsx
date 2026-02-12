@@ -2,31 +2,31 @@ import DashboardCard from "./DashboardCard";
 import { generateDateRange } from "./generateDateRange";
 import { getMonthlyTransaction } from "../transactions/transactionsApi";
 import { useState, useEffect } from "react";
-import {useNavigate} from "react-router-dom"
-
+import { useNavigate } from "react-router-dom";
+import AddTransactionModal from "../transactions/AddTransactionModal";
 
 const DashboardTransaction = () => {
   // monthly transactions
   const [monthlyTransactions, setMonthlyTransactions] = useState([]);
 
-  const navigate = useNavigate()
+  const [toggleAddTransactionModal, setToggleAddTransactionModal] = useState(false)
+
+  const navigate = useNavigate();
 
   // generate data range
   // extract current months start and end date
   const dateRanges = generateDateRange();
   const startDate = dateRanges[0].start_date;
   const endDate = dateRanges[0].end_date;
-  
-
 
   const date = new Date();
   const currentYear = date.getFullYear();
-  const currentMonth = (date.getMonth()+1).toString().padStart(2,"0");
-  const currentDate = (date.getDate()).toString().padStart(2,"0");
-  const today = currentYear + "-" + currentMonth + "-" + currentDate
+  const currentMonth = (date.getMonth() + 1).toString().padStart(2, "0");
+  const currentDate = date.getDate().toString().padStart(2, "0");
+  const today = currentYear + "-" + currentMonth + "-" + currentDate;
 
-  const monthString = date.toLocaleDateString('default', {month:"long"})
-  
+  const monthString = date.toLocaleDateString("default", { month: "long" });
+
   useEffect(() => {
     getMonthlyTransaction(startDate, today).then((data) =>
       setMonthlyTransactions(data),
@@ -41,13 +41,17 @@ const DashboardTransaction = () => {
             {" "}
             Transactions for {monthString} {currentYear}{" "}
           </div>
-          <button
-            className=""
-            onClick={() => navigate("/transactions")}
-          >
-            View All Transactions
-          </button>
+          <div className="flex flex-row">
+            <button className="mr-5"
+              onClick={() => setToggleAddTransactionModal(true)}>
+              <i class="fa-solid fa-plus"></i> Transaction{" "}
+            </button>
+            <button className="" onClick={() => navigate("/transactions")}>
+              View All Transactions
+            </button>
+          </div>
         </div>
+        {toggleAddTransactionModal && <AddTransactionModal setToggleAddTransactionModal={setToggleAddTransactionModal}/>}
         {/* table */}
         <div className="text-l">
           <table className="table-auto w-full text-left border-collapse bg-slate-100">

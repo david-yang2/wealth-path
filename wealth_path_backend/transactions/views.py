@@ -190,3 +190,11 @@ class RemoveTransactionAPIView(generics.RetrieveDestroyAPIView):
         # Only expose transactions that belong to the authenticated user
         return Transaction.objects.filter(user=self.request.user)
     
+
+# add transaction 
+class AddTransactionAPIView(generics.CreateAPIView):
+    serializer_class = TransactionSerializer
+    permission_classes = [IsAuthenticated]
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
